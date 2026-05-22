@@ -1,12 +1,13 @@
-# 📊 Call Center Operations Analysis
+# Call Center Operations Analysis
 
 ## TABLE OF CONTENTS
 
 - [Overview](#overview)
-- [Data Source](#data-source)
+- [Data](#data)
 - [Data Processing](#data-processing)
 - [Skills Demonstrated](#skills-demonstrated)
 - [Objectives / Problem Statement](#objectivesproblem-statement)
+- [Performance Metrics](#performance-metrics)
 - [Data Analysis and Visualization](#data-analysis-and-visualization)
 - [Insights](#insights)
 - [Recommendations](#recommendations)
@@ -21,12 +22,12 @@ The goal was to identify where the operation was losing efficiency — through a
 
 ---
 
-## DATA SOURCE
+## DATA
 
 The dataset used in this project covers inbound call center activity across voice, email, and chat/SMS channels. It includes the following key fields:
 
 - **Call logs** — call ID, date, time, channel, duration, wait time, and resolution status (resolved, escalated, or abandoned)
-- **Contact reasons** — categorised as order status, returns/refunds, billing issues, delivery delays, and other
+- **Contact reasons** — categorised as order status, returns/refunds, billing issues, delivery delays, etc.
 - **Agent records** — agent ID, first call resolution rate, average handle time, and post-call CSAT rating
 - **Queue data** — wait time per call, used to calculate abandon rates by wait-time bucket
 - **Monthly volume** — total inbound contacts per month, broken down by channel
@@ -83,8 +84,22 @@ The call center was experiencing growing inbound volume without a corresponding 
 The objective of this project was to answer all five questions using the available data, and to present findings in a format actionable enough to inform both operational and strategic decisions.
 
 ---
+## Performance Metrics
+1. **FCR – First Call Resolution**: The percentage of customer calls that are fully resolved the first time, without the customer needing to call back. A higher FCR means agents are solving problems completely in one interaction. 74.2% means about 3 in 4 calls were resolved on the spot.
+
+2. **AHT – Average Handle Time**: The average total time an agent spends on a single call — including talk time, hold time, and any wrap-up work after the call ends. The target on this dashboard is under 4 minutes; the current average is 4 minutes 38 seconds, meaning agents are running slightly over.
+
+3. **CSAT – Customer Satisfaction Score**: A rating customers give after an interaction, usually on a scale of 1–5. It directly measures how happy callers were with the service they received. A score of 4.1/5 is generally considered good, though there's room to improve.
+
+4. **Abandon Rate**: The percentage of callers who hang up before they ever reach an agent — usually because the wait time is too long. An 11.4% abandon rate means roughly 1 in 9 callers gave up and left without being helped.
+
+5. **Order Confirm Rate**: The percentage of orders that were successfully confirmed via a call. At 88.7%, this means nearly 9 in 10 orders went through confirmation without issue.
+
+---
 
 ## DATA ANALYSIS AND VISUALIZATION
+
+<img width="894" height="414" alt="image" src="https://github.com/user-attachments/assets/04ba4f3a-d9d8-4186-a391-85ad12212a59" />
 
 The analysis was structured around five core visual components, each designed to answer one of the stated objectives:
 
@@ -108,6 +123,9 @@ Maps average call counts by day of week and hour of day. The hottest cells clust
 
 **7. Agent Performance Snapshot (Table)**
 Ranks agents by FCR, AHT, and CSAT. The top agent achieves 82% FCR with a 3m 51s handle time; the lowest sits at 58% FCR and over 6 minutes per call. The spread is wide enough to have a measurable effect on overall team KPIs.
+
+<img width="892" height="167" alt="image" src="https://github.com/user-attachments/assets/1018b773-596d-48ea-9350-824826d24817" />
+
 
 **8. Inbound Channel Mix by Month (Stacked Bar Chart)**
 Shows how voice, email, and chat/SMS shares shifted across the six-month period. Voice gradually declined from 70% to 63% of volume as email and chat grew — reflecting a slow but consistent channel migration worth supporting strategically.
