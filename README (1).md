@@ -4,6 +4,7 @@
 
 - [Overview](#overview)
 - [Data](#data)
+- [Tools](#Tools)
 - [Data Processing](#data-processing)
 - [Skills Demonstrated](#skills-demonstrated)
 - [Objectives / Problem Statement](#objectivesproblem-statement)
@@ -35,6 +36,13 @@ The dataset used in this project covers inbound call center activity across voic
 The dataset spans 24,816 total call records across the six-month analysis window.
 
 ---
+## TOOLS
+
+1. **SQL** - Used to extract and query the raw call log data from the source database. Queries covered filtering by date range, joining call records with agent performance tables, and computing wait-time buckets using CASE WHEN logic.
+
+2. **Microsoft Power Query** - Used for data cleaning and validation steps. This included removing duplicate records, correcting inconsistent date and time formats, handling missing values in the resolution status and CSAT fields, and transforming raw call logs into a structured, analysis-ready format. Custom columns were created to derive wait-time buckets and contact reason categories, and data types were enforced across all fields before loading into the model.
+
+3. **Power BI** - Used for both exploratory analysis and final visualisation. During the exploratory phase, quick visuals and slicers were used to investigate distributions, spot outliers in agent performance, and understand how volume varied across channels and time periods. The final output is a one-page operations dashboard containing a pie chart, donut chart, grouped bar chart, area chart, column chart, heatmap matrix, stacked bar chart, and agent performance table. DAX measures were written to calculate FCR rate, abandon rate, average handle time, and CSAT averages at both team and agent level.
 
 ## DATA PROCESSING
 
